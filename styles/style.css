@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+@import url(colors.css);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    font-family: 'Overpass', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--veryDarkBlue);
+    font-size: 15px;
+}
+
+.main-container{
+    max-width: 400px;
+    height: 420px;
+    max-height: 500px;
+    padding: 30px;
+    border-radius: 24px;
+    background-color: var(--darkBlue);
+    background: radial-gradient(circle at top,hsl(213, 19%, 18%, 70%),hsla(215, 20%, 12%) );
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 24px;
+}
+
+.rating img{
+    width: 50px;
+    border-radius: 50%;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: var(--darkBlue);
+}
+
+.paragraph-rating,
+.paragraph-thank-you{
+    color: var(--mediumGrey);
+}
+
+.rating ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating li button{
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--darkBlue);
+  color: var(--mediumGrey);
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.rating #submit{
+    background-color: var(--orange);
+    border: none;
+    color: var(--white);
+    padding: 16px 0;
+    letter-spacing: 3px;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+/* Hover */
+.rating #submit:hover{
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+.rating li button:hover{
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.rating li button:focus{
+  background-color: var(--lightGrey);
+  color: var(--white);
+}
+
+.thank-you{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  
+}
+.selected{
+  background-color: var(--darkBlue);
+  border-radius: 50px; 
+  padding: .3rem .3rem 0;
+  margin: 16px 0;
+}
+.selected p{
+  color: rgba(255, 152, 74, 0.931);
+  padding: 0 10px;
+}
+
+.hidden{
+  display: none;
+}
+
+@media screen and (max-width:425px) {
+  .main-container{
+    width: 90%;
+    padding: 1.875rem 1.3rem;
+  }
+}
+@media screen and (max-width:375px) {
+  .rating li button{
+    width: 45px;
+    height: 45px;
+  }
+
+}
+
